@@ -1,0 +1,19 @@
+
+// Contextual colors, duh:
+// ----------
+$flip-switch-default: 				#5DD39E; // this one's important
+$flip-switch-info:					#93D0FF;
+$flip-switch-success:				$flip-switch-default;
+$flip-switch-warning:				#FCA311;
+$flip-switch-danger:				#E63946;
+
+// Basic element setup:
+// ----------
+$flip-switch-width:                 44px;
+$flip-switch-height:                28px;
+$flip-switch-background:			#fff; // acts as the base color (background and handle)
+$flip-switch-color-off:             #eee;
+$flip-switch-color-on:              $flip-switch-default;
+$flip-switch-transition-timing:     ease-out;
+$flip-switch-transition-duration:   .15s;
+$flip-switch-transition-property:   opacity, background, border;
