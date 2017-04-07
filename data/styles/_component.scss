@@ -1,4 +1,4 @@
-$flip-switch-width:                 34px;
+$flip-switch-width:                 40px;
 $flip-switch-height:                22px;
 $flip-switch-color-off:             #eee;
 $flip-switch-border-off:            #eee;
@@ -64,14 +64,13 @@ $flip-switch-transition-property:   opacity, background;
 	background: white;
 	border-radius: 10px;
 	box-shadow: 4px 0 8px rgba(0,0,0,.1);
-	//.linear-gradient(top, white 40%, #f0f0f0);
 	transition-timing-function: $flip-switch-transition-timing;
 	transition-duration: $flip-switch-transition-duration;
 	transition-property: left;
 
 	.switch-input:checked ~ & {
 		left: $flip-switch-width - ($flip-switch-height - 2px);
-		box-shadow: -4px 0 8px rgba(0,0,0,.2);
+		box-shadow: -4px 0 5px rgba(0,0,0,.1);
 	}
 }
 

@@ -9,7 +9,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.42;
     color: #444;
-    background-color: #fff;
+    background-color: #fafafa;
 }
 html, body {
     height: 100%;
@@ -136,8 +136,8 @@ h4, .h4 { font-size: 1.428em; }
 .container {
 	margin-right: auto;
 	margin-left: auto;
-	padding-left:  10px;
-	padding-right: 10px;
+	padding-left:  15px;
+	padding-right: 15px;
 
 	@media (min-width: 768px) {
 		width: 740px;
@@ -150,51 +150,17 @@ h4, .h4 { font-size: 1.428em; }
 	}
 }
 
-.panel {
-  margin-bottom: 20px;
-  background-color: #fff;
-  border: 1px solid transparent;
-  border-radius: 3px
-}
-
-.panel-body {
-  padding: 20px 10px;
-}
-
-.panel-heading {
-  padding: 15px 10px;
-  border-bottom: 1px solid transparent;
-  border-radius: 3px 3px 0 0;
-}
-
-.panel-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 16px;
-  color: inherit;
-
-  > a,
-  > small,
-  > .small,
-  > small > a,
-  > .small > a {
-    color: inherit;
-  }
-}
-
-.panel-footer {
-  padding: 15px 10px;
-  background-color: #fafafa;
-  border-top: 1px solid #eee;
-  border-radius: 0 0 3px 3px;
+.panel,.well {
+	padding: 15px 15px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	&:empty { display: none; }
 }
 
 .well {
-  min-height: 20px;
-  padding: 20px 10px;
-  margin-bottom: 20px;
-  background-color: #eaeaea;
-  border-radius: 3px;
+	background-color: #eaeaea;
 }
 
 ///* Custom Paddings */
