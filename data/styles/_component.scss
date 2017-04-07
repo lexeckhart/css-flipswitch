@@ -1,0 +1,81 @@
+$flip-switch-width:                 34px;
+$flip-switch-height:                22px;
+$flip-switch-color-off:             #eee;
+$flip-switch-border-off:            #eee;
+$flip-switch-color-on:              #0B48A3;
+$flip-switch-border-on:             #0B48A3;
+$flip-switch-transition-timing:     ease-out;
+$flip-switch-transition-duration:   .15s;
+$flip-switch-transition-property:   opacity, background;
+
+
+.switch {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	line-height: inherit;
+	vertical-align: middle;
+	width: $flip-switch-width;
+	height: $flip-switch-height;
+	padding: 1px;
+	background-color: white;
+	border-radius: 18px;
+	cursor: pointer;
+	*, *:before, *:after {
+		box-sizing: border-box;
+	}
+}
+
+.switch-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.switch-label {
+	position: relative;
+	display: block;
+	height: $flip-switch-height - 2px; //remove padding
+	font-size: 10px;
+	text-transform: uppercase;
+	background: $flip-switch-color-off;
+	border-radius: inherit;
+	box-shadow: none;
+	border:1px solid $flip-switch-border-off;
+	transition-timing-function: $flip-switch-transition-timing;
+	transition-duration: $flip-switch-transition-duration;
+	transition-property: opacity, background;
+
+	.switch-input:checked ~ & {
+		background: $flip-switch-color-on;
+		box-shadow: none;
+		&:before { opacity: 0; }
+		&:after { opacity: 1; }
+	}
+}
+
+.switch-handle {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: $flip-switch-height - 4px;
+	height: $flip-switch-height - 4px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 4px 0 8px rgba(0,0,0,.1);
+	//.linear-gradient(top, white 40%, #f0f0f0);
+	transition-timing-function: $flip-switch-transition-timing;
+	transition-duration: $flip-switch-transition-duration;
+	transition-property: left;
+
+	.switch-input:checked ~ & {
+		left: $flip-switch-width - ($flip-switch-height - 2px);
+		box-shadow: -4px 0 8px rgba(0,0,0,.2);
+	}
+}
+
+.switch > .switch-input:checked ~ .switch-label {
+	background: $flip-switch-color-on;
+	border: 1px solid $flip-switch-border-on;
+}
