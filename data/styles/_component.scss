@@ -63,7 +63,7 @@ $flip-switch-transition-property:   opacity, background;
 	height: $flip-switch-height - 4px;
 	background: white;
 	border-radius: 10px;
-	box-shadow: 4px 0 8px rgba(0,0,0,.1);
+	box-shadow: -4px 0 5px rgba(0,0,0,.1);
 	transition-timing-function: $flip-switch-transition-timing;
 	transition-duration: $flip-switch-transition-duration;
 	transition-property: left;
